@@ -43,3 +43,14 @@ body.dark{
     --toggle-color: #fff;
     --text-color: #ccc;
 }
+
+.video-js {
+    width: 100%;
+    /* max-width: 1000px !important; */
+    max-height: 600px !important;
+    height: 100%;
+}
+
+.vjs-icon-placeholder:before {
+    position: relative !important;
+}
