@@ -1,0 +1,14 @@
+.container {
+    width: calc(100% - 88px);
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 88px;
+    background-color: lightblue;
+    transition: var(--tran-05);
+}
+
+.-open {
+    left: 280px;
+    width: calc(100% - 280px);
+}

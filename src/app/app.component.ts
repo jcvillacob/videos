@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'videos';
+  menuOpen: boolean = false;
+
+  menuOpenF(menuOpen: boolean) {
+    this.menuOpen = menuOpen;
+  }
 }
