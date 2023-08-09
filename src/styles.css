@@ -47,7 +47,7 @@ body.dark{
 .video-js {
     width: 100%;
     /* max-width: 1000px !important; */
-    max-height: 600px !important;
+    max-height: 800px !important;
     height: 100%;
 }
 

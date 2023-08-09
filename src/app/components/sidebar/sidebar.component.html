@@ -13,43 +13,43 @@
     </header>
     <div class="menu-bar">
         <div class="menu">
-            <li class="search-box" (click)="toggle('search')">
+            <!-- <li class="search-box" (click)="toggle('search')">
                 <i class='bx bx-search icon'></i>
                 <input type="text" placeholder="Buscar...">
-            </li>
+            </li> -->
             <ul class="menu-links">
                 <li class="nav-link">
-                    <a href="#">
+                    <a>
                         <i class='bx bx-home-alt icon'></i>
                         <span class="text nav-text">Home</span>
                     </a>
                 </li>
                 <li class="nav-link">
-                    <a href="#">
+                    <a>
                         <i class='bx bxs-folder-open icon'></i>
                         <span class="text nav-text">Pendientes</span>
                     </a>
                 </li>
-                <li class="nav-link">
-                    <a href="#">
+                <li class="nav-link" routerLink="home">
+                    <a>
                         <i class='bx bxs-videos icon'></i>
                         <span class="text nav-text">Todos los videos</span>
                     </a>
                 </li>
                 <li class="nav-link">
-                    <a href="#">
+                    <a>
                         <i class='bx bx-git-pull-request icon'></i>
                         <span class="text nav-text">Exámenes</span>
                     </a>
                 </li>
-                <li class="nav-link">
-                    <a href="#">
+                <li class="nav-link" routerLink="video">
+                    <a>
                         <i class='bx bx-bookmark icon' ></i>
                         <span class="text nav-text">Guardados</span>
                     </a>
                 </li>
                 <li class="nav-link">
-                    <a href="#">
+                    <a>
                         <i class='bx bx-bar-chart-alt-2 icon'></i>
                         <span class="text nav-text">Resultados</span>
                     </a>
@@ -58,7 +58,7 @@
         </div>
         <div class="bottom-content">
             <li class="">
-                <a href="#">
+                <a>
                     <i class='bx bx-log-out icon'></i>
                     <span class="text nav-text">Logout</span>
                 </a>

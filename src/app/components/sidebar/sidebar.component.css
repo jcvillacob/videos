@@ -15,6 +15,9 @@
 }
 
 
+
+
+
 /* ===== Reusable code - Here ===== */
 .sidebar li{
     height: 50px;
@@ -215,4 +218,18 @@ body.dark .sidebar li a:hover .text{
 }
 .dark .switch::before{
     left: 20px;
+}
+
+.nav-link:hover {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 700px) {
+    .sidebar.close{
+        left: -88px;
+    }
+    
+    .sidebar header .toggle{
+        right: -40px;
+    }
 }
