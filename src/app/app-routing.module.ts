@@ -6,11 +6,12 @@ import { PendientesComponent } from './components/pendientes/pendientes.componen
 import { UploadComponent } from './components/upload/upload.component';
 
 const routes: Routes = [
-  { path:'', pathMatch: 'full', redirectTo: 'home'},
-  { path:'home', component: TodosComponent},
-  { path:'video', component: ReproductorComponent},
+  { path:'', pathMatch: 'full', redirectTo: 'home' },
+  { path:'home', component: TodosComponent },
+  { path:'video', component: ReproductorComponent },
+  { path: 'video/:id', component: ReproductorComponent },
   { path:'pendientes', component: PendientesComponent},
-  { path:'upload', component: UploadComponent}
+  { path:'upload', component: UploadComponent }
 ];
 
 @NgModule({
