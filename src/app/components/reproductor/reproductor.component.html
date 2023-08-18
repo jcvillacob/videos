@@ -26,8 +26,10 @@
             </div>
 
             <!-- Resto de información -->
-            <div class="info__resto" [ngClass]="{'-leyendo' : leyendo}">
-                {{ video.description }}
+            <div class="info__resto" [ngClass]="{'-leyendo' : leyendo}" *ngFor="let descript of descriptions">
+                <p class="resto__p">
+                    {{ descript }}
+                </p>
             </div>
 
             <!-- Test -->

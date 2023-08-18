@@ -9,7 +9,8 @@ import { VideosService } from 'src/app/services/videos.service';
 })
 export class ReproductorComponent implements OnInit {  
   leyendo: boolean = false;
-  video: any = {}
+  video: any = {};
+  descriptions: [] = [];
 
   constructor(
     private videosService: VideosService,
@@ -21,6 +22,8 @@ export class ReproductorComponent implements OnInit {
     if (id) {
       this.videosService.getVideo(id).subscribe(data => {
         this.video = data;
+        this.descriptions = data.description.split('\r\n\r\n');
+        console.log(this.descriptions);
       })
     }
   }

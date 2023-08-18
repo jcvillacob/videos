@@ -11,7 +11,8 @@ const routes: Routes = [
   { path:'video', component: ReproductorComponent },
   { path: 'video/:id', component: ReproductorComponent },
   { path:'pendientes', component: PendientesComponent},
-  { path:'upload', component: UploadComponent }
+  { path:'upload', component: UploadComponent },
+  { path:'**', pathMatch: 'full', redirectTo: 'home' }
 ];
 
 @NgModule({

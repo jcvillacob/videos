@@ -44,6 +44,15 @@
     transition: all 0.3s;
 }
 
+.info__resto {
+    display: flex;
+    flex-direction: column;
+}
+
+.resto__p {
+    margin-top: 15px;
+}
+
 .info__test {
     width: 100%;
     display: flex;
@@ -51,7 +60,7 @@
 
 .test__btn {
     padding: 10px 55px;
-    margin-top: 15px;
+    margin-top: 25px;
     font-size: 16px;
     color: var(--toggle-color);
     background-color: var(--primary-color);
@@ -113,11 +122,15 @@
         padding: 15px;
     }
 
+    .info__title {
+        font-size: 28px;
+    }
+
     .info__resto {
         height: 0;
         overflow-y: hidden;
     }
-
+    
     .info__info {
         display: flex;
         gap: 20px;
