@@ -1,0 +1,72 @@
+.container {
+    color: var(--text-color);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.container__title {
+    width: 100%;
+    padding-left: 50px;
+}
+
+.container__cursos {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.cursos__card {
+    border-radius: 8px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.267);
+    width: 200px;
+    overflow: hidden;
+    background-color: #ffffff8c;
+}
+
+.cursos__card:hover {
+    cursor: pointer;
+}
+
+.card__image {
+    width: 100%;
+    height: 134px;
+    object-fit: cover;
+}
+
+.card__title {
+    padding: 10px;
+}
+
+@media screen and (max-width: 700px) {
+    .container {
+        padding: 5px;
+    }
+
+    .container__title {
+        padding-left: 30px;
+        padding-top: 30px;
+    }
+
+    .container__cursos {
+        width: 100%;
+        gap: 10px;
+    }
+
+    .cursos__card {
+        width: 160px;
+    }
+
+    .card__image {
+        width: 100%;
+        height: 114px;
+        object-fit: cover;
+    }
+
+}

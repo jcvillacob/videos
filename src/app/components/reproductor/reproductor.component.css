@@ -32,6 +32,11 @@
     margin-top: 25px;
 }
 
+.info__arrow {
+    display: none;
+    transition: all 0.3s;
+}
+
 
 
 /* =========== CONTAINER PARA SIDE =========== */
@@ -79,11 +84,34 @@
         padding: 15px;
     }
 
-
-    .container__side {
-        min-height: 500px;
-        margin-top: 50px;
+    .info__resto {
+        height: 0;
+        overflow-y: hidden;
     }
 
+    .info__info {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
 
+    .info__arrow {
+        display: block;
+    }
+
+    .info__arrow.-leyen2 {
+        transform: rotate(180deg);
+    }
+    
+    .info__resto.-leyendo {
+        height: fit-content;
+        overflow-y: visible;
+    }
+
+    /* SIDE */
+    .container__side {
+        position: inherit;
+        min-height: 200px;
+        margin-top: 20px;
+    }
 }

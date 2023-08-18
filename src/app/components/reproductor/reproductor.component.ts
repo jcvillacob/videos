@@ -6,9 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./reproductor.component.css']
 })
 export class ReproductorComponent {
+  leyendo: boolean = false;
 
   constructor(){
-    console.log();
+  }
+
+  changeLeyendo () {
+    this.leyendo = !this.leyendo;
   }
 
 }

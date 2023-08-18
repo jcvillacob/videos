@@ -2,9 +2,12 @@
     <div class="container__container">
         <!-- VIDEO -->
         <div class="container__video">
-            <video id="my-video" class="video-js" controls preload="auto" poster="https://storage.cloud.google.com/prueba_educacion/videos_coorditanques/prueba/blank%20space.webp"
+            <video id="my-video" class="video-js" controls preload="auto"
+                poster="https://storage.cloud.google.com/prueba_educacion/videos_coorditanques/prueba/blank%20space.webp"
                 data-setup="{}" playsinline>
-                <source src="https://storage.cloud.google.com/prueba_educacion/videos_coorditanques/prueba/Blank%20Space.mp4" type='video/mp4'>
+                <source
+                    src="https://storage.cloud.google.com/prueba_educacion/videos_coorditanques/prueba/Blank%20Space.mp4"
+                    type='video/mp4'>
                 <p class="vjs-no-js">
                     Para ver este video por favor habilita JavaScript, y considera la posibilidad de actualizar a un
                     navegador web que <a href="https://videojs.com/html5-video-support/" target="_blank">soporta video
@@ -15,45 +18,53 @@
 
         <!-- Texto Informativo -->
         <div class="container__info">
-            <h1 class="info__title">Titulo del Video</h1>
-            <p>Bienvenida al video Bienvenida al video Bienvenida al video Bienvenida al video Bienvenida al video
-                Bienvenida al video Bienvenida al video Bienvenida al video Bienvenida al video</p>
+            <div class="info__info" (click)="changeLeyendo()">
+                <h1 class="info__title">Titulo del Video</h1>
+                <div class="info__arrow" [ngClass]="{'-leyen2' : leyendo}"><img
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAJ1JREFUSEvtk9EJgDAMRK+b6CY6ipPoJrqJqziKHLQQStOkH4If8UeL53v1ogkfH+ljPkJgNhwV/b+iA8AF4FG2OgFYcqYZ6Q2Z8D3D14aE8DMLNk3SExBwA+CZbyAlEs57szYM6zNtScgqO+/CGbQEzNQSQtm7CfcKagnXLviIQEp4rXZez8JTkXymDNz8wUpgVOAGh8BdVczArOoFuOQZGXBiW4AAAAAASUVORK5CYII=" />
+                </div>
+            </div>
+            <!-- Resto de información -->
+            <div class="info__resto" [ngClass]="{'-leyendo' : leyendo}">
+                <p>Bienvenida al video Bienvenida al video Bienvenida al video Bienvenida al video Bienvenida al video
+                    Bienvenida al video Bienvenida al video Bienvenida al video Bienvenida al video</p>
 
-            <h2>Subtitulo del Video</h2>
-            <p>Bienvenida al video Bienvenida al video Bienvenida al video Bienvenida al video Bienvenida al video
-                Bienvenida al video Bienvenida al video Bienvenida al video Bienvenida al video</p>
+                <h2>Subtitulo del Video</h2>
+                <p>Bienvenida al video Bienvenida al video Bienvenida al video Bienvenida al video Bienvenida al video
+                    Bienvenida al video Bienvenida al video Bienvenida al video Bienvenida al video</p>
 
-            <h2>Subtitulo del Video</h2>
-            <p>Bienvenida al video Bienvenida al video Bienvenida al video Bienvenida al video Bienvenida al video
-                Bienvenida al video Bienvenida al video Bienvenida al video Bienvenida al video</p>
+                <h2>Subtitulo del Video</h2>
+                <p>Bienvenida al video Bienvenida al video Bienvenida al video Bienvenida al video Bienvenida al video
+                    Bienvenida al video Bienvenida al video Bienvenida al video Bienvenida al video</p>
 
-            <h2>Subtitulo del Video</h2>
-            <p>Bienvenida al video Bienvenida al video Bienvenida al video Bienvenida al video Bienvenida al video
-                Bienvenida al video Bienvenida al video Bienvenida al video Bienvenida al video</p>
+                <h2>Subtitulo del Video</h2>
+                <p>Bienvenida al video Bienvenida al video Bienvenida al video Bienvenida al video Bienvenida al video
+                    Bienvenida al video Bienvenida al video Bienvenida al video Bienvenida al video</p>
 
-            <h2>Subtitulo del Video</h2>
-            <p>Bienvenida al video Bienvenida al video Bienvenida al video Bienvenida al video Bienvenida al video
-                Bienvenida al video Bienvenida al video Bienvenida al video Bienvenida al video</p>
+                <h2>Subtitulo del Video</h2>
+                <p>Bienvenida al video Bienvenida al video Bienvenida al video Bienvenida al video Bienvenida al video
+                    Bienvenida al video Bienvenida al video Bienvenida al video Bienvenida al video</p>
 
-            <h2>Subtitulo del Video</h2>
-            <p>Bienvenida al video Bienvenida al video Bienvenida al video Bienvenida al video Bienvenida al video
-                Bienvenida al video Bienvenida al video Bienvenida al video Bienvenida al video</p>
+                <h2>Subtitulo del Video</h2>
+                <p>Bienvenida al video Bienvenida al video Bienvenida al video Bienvenida al video Bienvenida al video
+                    Bienvenida al video Bienvenida al video Bienvenida al video Bienvenida al video</p>
 
-            <h2>Subtitulo del Video</h2>
-            <p>Bienvenida al video Bienvenida al video Bienvenida al video Bienvenida al video Bienvenida al video
-                Bienvenida al video Bienvenida al video Bienvenida al video Bienvenida al video</p>
+                <h2>Subtitulo del Video</h2>
+                <p>Bienvenida al video Bienvenida al video Bienvenida al video Bienvenida al video Bienvenida al video
+                    Bienvenida al video Bienvenida al video Bienvenida al video Bienvenida al video</p>
 
-            <h2>Subtitulo del Video</h2>
-            <p>Bienvenida al video Bienvenida al video Bienvenida al video Bienvenida al video Bienvenida al video
-                Bienvenida al video Bienvenida al video Bienvenida al video Bienvenida al video</p>
+                <h2>Subtitulo del Video</h2>
+                <p>Bienvenida al video Bienvenida al video Bienvenida al video Bienvenida al video Bienvenida al video
+                    Bienvenida al video Bienvenida al video Bienvenida al video Bienvenida al video</p>
 
-            <h2>Subtitulo del Video</h2>
-            <p>Bienvenida al video Bienvenida al video Bienvenida al video Bienvenida al video Bienvenida al video
-                Bienvenida al video Bienvenida al video Bienvenida al video Bienvenida al video</p>
+                <h2>Subtitulo del Video</h2>
+                <p>Bienvenida al video Bienvenida al video Bienvenida al video Bienvenida al video Bienvenida al video
+                    Bienvenida al video Bienvenida al video Bienvenida al video Bienvenida al video</p>
 
-            <h2>Subtitulo del Video</h2>
-            <p>Bienvenida al video Bienvenida al video Bienvenida al video Bienvenida al video Bienvenida al video
-                Bienvenida al video Bienvenida al video Bienvenida al video Bienvenida al video</p>
+                <h2>Subtitulo del Video</h2>
+                <p>Bienvenida al video Bienvenida al video Bienvenida al video Bienvenida al video Bienvenida al video
+                    Bienvenida al video Bienvenida al video Bienvenida al video Bienvenida al video</p>
+            </div>
         </div>
     </div>
 

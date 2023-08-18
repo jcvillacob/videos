@@ -7,18 +7,25 @@ import { AppComponent } from './app.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { ReproductorComponent } from './components/reproductor/reproductor.component';
 import { TodosComponent } from './components/todos/todos.component';
+import { PendientesComponent } from './components/pendientes/pendientes.component';
+import { UploadComponent } from './components/upload/upload.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
     ReproductorComponent,
-    TodosComponent
+    TodosComponent,
+    PendientesComponent,
+    UploadComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,47 @@
+<div class="upload-container">
+    <div class="upload-container__title">
+        <h1 class="title__text">Subir Capacitación</h1>
+    </div>
+
+    <form [formGroup]="formulario" (ngSubmit)="onSubmit()" enctype="multipart/form-data" class="upload-container__form">
+        <div class="form__div">
+            <label for="titulo" class="">Título:</label>
+            <input type="text" id="titulo" formControlName="title" required>
+        </div>
+
+        <div class="form__div">
+            <label for="descripcion">Descripción:</label>
+            <textarea id="descripcion" formControlName="description" required></textarea>
+        </div>
+
+        <div class="form__div">
+            <label for="grupo">Grupo:</label>
+            <select id="grupo" formControlName="group" required>
+                <option value="Todos">Todos</option>
+                <option value="Conductores">Conductores</option>
+                <option value="Administrativos">Administrativos</option>
+            </select>
+        </div>
+
+        <div class="form__div">
+            <label for="video">Vídeo:</label>
+            <input type="file" id="video" (change)="onVideoSelect($event)" required>
+        </div>
+
+        <div class="form__div">
+            <label for="image">Imagen:</label>
+            <input type="file" id="image" (change)="onImgSelect($event)" required>
+        </div>
+
+        <div class="form__div">
+            <label for="test" class="">Test:</label>
+            <input type="text" id="test" formControlName="test" required>
+        </div>
+
+        <div class="form__button">
+            <button type="submit" class="button__btn">Enviar</button>
+        </div>
+    </form>
+
+
+</div>
