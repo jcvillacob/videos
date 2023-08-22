@@ -3,8 +3,12 @@
         <h1 class="title__text">Todas las Capacitaciones</h1>
     </div>
 
+
+
     <!-- CURSOS -->
     <div class="container__cursos">
+        
+
         <!-- CARD -->
         <div class="cursos__card" *ngFor="let video of videos; index as i"  (click)= verDocument(video)>
             <img [src]="video.imgUrl" alt="" class="card__image">

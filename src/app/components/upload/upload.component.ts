@@ -36,12 +36,30 @@ export class UploadComponent {
     }
   }
 
+  resetVideoFile() {
+    this.videoFile = null;
+    const inputElement = document.getElementById('video') as HTMLInputElement; // Asume que tienes un id='video-input' en tu elemento de entrada
+    inputElement.value = ''; // Esto resetea la selección de archivo en el elemento de entrada
+  }
+
+  resetImgFile() {
+    this.imgFile = null;
+    const inputElement = document.getElementById('image') as HTMLInputElement; // Asume que tienes un id='video-input' en tu elemento de entrada
+    inputElement.value = ''; // Esto resetea la selección de archivo en el elemento de entrada
+  }
+
+
   onSubmit() {
-    if (this.videoFile && this.imgFile && this.formulario.valid) {
+    if (!this.videoFile || !this.imgFile || !this.formulario.valid) {
+      this.toastr.error('Debes Ingresar todos los datos', 'Error');
+    } else if (this.videoFile && this.imgFile && this.formulario.valid) {
       this.videosService.uploadVideo(this.formulario.value, this.videoFile, this.imgFile)
         .subscribe(response => {
           console.log('Video uploaded successfully:', response);
           this.toastr.success('Creado correctamente', 'Éxito');
+          this.formulario.reset(); // Reinicias el formulario
+          this.resetVideoFile(); // Reinicia la selección de archivos de video
+          this.resetImgFile(); // Reinicia la selección de archivos de imagen
         }, error => {
           console.error('An error occurred while uploading the video:', error);
           this.toastr.error('Ha ocurrido un error durante la carga', 'Error');
