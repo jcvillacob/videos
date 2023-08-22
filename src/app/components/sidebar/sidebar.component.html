@@ -24,12 +24,12 @@
                         <span class="text nav-text">Home</span>
                     </a>
                 </li>
-                <li class="nav-link" routerLink="pendientes">
+                <!-- <li class="nav-link" routerLink="pendientes">
                     <a>
                         <i class='bx bxs-folder-open icon'></i>
                         <span class="text nav-text">Pendientes</span>
                     </a>
-                </li>
+                </li> -->
                 <li class="nav-link" routerLink="home">
                     <a>
                         <i class='bx bxs-videos icon'></i>
@@ -42,7 +42,7 @@
                         <span class="text nav-text">Exámenes</span>
                     </a>
                 </li>
-                <li class="nav-link" routerLink="video">
+                <li class="nav-link">
                     <a>
                         <i class='bx bx-bookmark icon' ></i>
                         <span class="text nav-text">Guardados</span>
@@ -68,7 +68,7 @@
                     <i class='bx bx-moon icon moon'></i>
                     <i class='bx bx-sun icon sun'></i>
                 </div>
-                <span class="mode-text text">{{tema }}</span>
+                <span class="mode-text text">{{ tema }}</span>
                 <div class="toggle-switch" (click)="toggleMode()">
                     <span class="switch"></span>
                 </div>

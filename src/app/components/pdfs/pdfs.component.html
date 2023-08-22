@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="container__container">
+        <!-- PDF -->
+        <div class="container__video" #pdfContainer>
+            <pdf-viewer #pdfViewer [src]="pdfSrc" [render-text]="true" [zoom]="zoom"></pdf-viewer>
+        </div>
+        
+
+        <!-- Texto Informativo -->
+        <div class="container__info">
+            <div class="info__info" (click)="changeLeyendo()">
+                <h1 class="info__title">{{ video.title }}</h1>
+                <div class="info__arrow" [ngClass]="{'-leyen2' : leyendo}"><img
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAJ1JREFUSEvtk9EJgDAMRK+b6CY6ipPoJrqJqziKHLQQStOkH4If8UeL53v1ogkfH+ljPkJgNhwV/b+iA8AF4FG2OgFYcqYZ6Q2Z8D3D14aE8DMLNk3SExBwA+CZbyAlEs57szYM6zNtScgqO+/CGbQEzNQSQtm7CfcKagnXLviIQEp4rXZez8JTkXymDNz8wUpgVOAGh8BdVczArOoFuOQZGXBiW4AAAAAASUVORK5CYII=" />
+                </div>
+            </div>
+
+            <!-- Resto de información -->
+            <div class="info__resto" [ngClass]="{'-leyendo' : leyendo}" *ngFor="let descript of descriptions">
+                <p class="resto__p">
+                    {{ descript }}
+                </p>
+            </div>
+
+            <!-- Test -->
+            <div class="info__test">
+                <button class="test__btn" (click)="realizarPrueba()">Realizar Prueba</button>
+              </div>              
+        </div>
+    </div>
+
+
+    <!-- Otros Videos -->
+    <div class="container__side">
+        <div class="side__title">
+            <h3 class="title__others">Todos los Videos</h3>
+        </div>
+    </div>
+
+
+</div>

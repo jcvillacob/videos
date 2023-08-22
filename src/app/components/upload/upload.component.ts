@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { VideosService } from 'src/app/services/videos.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-upload',
@@ -12,13 +13,14 @@ export class UploadComponent {
     title: ['', Validators.required],
     description: ['', Validators.required],
     group: ['Todos', Validators.required],
+    type: ['Video', Validators.required],
     test: ['', Validators.required]
   });
 
   videoFile: File | null = null;
   imgFile: File | null = null;
 
-  constructor(private fb: FormBuilder, private videosService: VideosService) { }
+  constructor(private fb: FormBuilder, private videosService: VideosService, private toastr: ToastrService) { }
 
   onVideoSelect(event: Event) {
     const inputElement = event.target as HTMLInputElement;
@@ -39,8 +41,10 @@ export class UploadComponent {
       this.videosService.uploadVideo(this.formulario.value, this.videoFile, this.imgFile)
         .subscribe(response => {
           console.log('Video uploaded successfully:', response);
+          this.toastr.success('Creado correctamente', 'Éxito');
         }, error => {
           console.error('An error occurred while uploading the video:', error);
+          this.toastr.error('Ha ocurrido un error durante la carga', 'Error');
         });
     }
   }

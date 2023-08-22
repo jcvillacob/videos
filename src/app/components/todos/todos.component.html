@@ -6,10 +6,14 @@
     <!-- CURSOS -->
     <div class="container__cursos">
         <!-- CARD -->
-        <div class="cursos__card" *ngFor="let video of videos; index as i" [routerLink]="['/video', video._id]">
+        <div class="cursos__card" *ngFor="let video of videos; index as i"  (click)= verDocument(video)>
             <img [src]="video.imgUrl" alt="" class="card__image">
             <div class="card__title">
                 <h4 class="title__nombre-curso">{{ video.title }}</h4>
+            </div>
+            <div class="card__footer">
+                <div class="footer__type">{{ video.type }}</div>
+                <div class="footer__type">{{ video.group }}</div>
             </div>
         </div>
 

@@ -24,12 +24,20 @@
         </div>
 
         <div class="form__div">
-            <label for="video">Vídeo:</label>
+            <label for="type">Tipo:</label>
+            <select id="type" formControlName="type" required>
+                <option value="Video">Video</option>
+                <option value="PDF">PDF</option>
+            </select>
+        </div>
+
+        <div class="form__div">
+            <label for="video">Archivo:</label>
             <input type="file" id="video" (change)="onVideoSelect($event)" required>
         </div>
 
         <div class="form__div">
-            <label for="image">Imagen:</label>
+            <label for="image">Portada:</label>
             <input type="file" id="image" (change)="onImgSelect($event)" required>
         </div>
 
@@ -42,6 +50,5 @@
             <button type="submit" class="button__btn">Enviar</button>
         </div>
     </form>
-
 
 </div>
