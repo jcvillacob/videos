@@ -4,7 +4,7 @@
         <div class="container__video" #pdfContainer>
             <pdf-viewer #pdfViewer [src]="pdfSrc" [render-text]="true" [zoom]="zoom"></pdf-viewer>
         </div>
-        
+
 
         <!-- Texto Informativo -->
         <div class="container__info">
@@ -25,17 +25,14 @@
             <!-- Test -->
             <div class="info__test">
                 <button class="test__btn" (click)="realizarPrueba()">Realizar Prueba</button>
-              </div>              
+            </div>
         </div>
     </div>
 
 
     <!-- Otros Videos -->
     <div class="container__side">
-        <div class="side__title">
-            <h3 class="title__others">Todos los Videos</h3>
-        </div>
+        <app-otros-videos></app-otros-videos>
     </div>
-
 
 </div>

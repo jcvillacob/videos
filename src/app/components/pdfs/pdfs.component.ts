@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild, AfterViewInit, ElementRef } from '@angula
 import { ActivatedRoute } from '@angular/router';
 import { VideosService } from 'src/app/services/videos.service';
 import { PdfViewerComponent as Viewer } from 'ng2-pdf-viewer';
+import { Video } from '../../models/video'
 
 @Component({
   selector: 'app-pdfs',
@@ -11,18 +12,18 @@ import { PdfViewerComponent as Viewer } from 'ng2-pdf-viewer';
 export class PdfsComponent implements OnInit, AfterViewInit {
   @ViewChild('pdfContainer') pdfContainer!: ElementRef;
   leyendo: boolean = false;
-  video: any = {};
+  video!: Video;
   pdfSrc!: string;
-  descriptions: [] = [];
+  descriptions: string[] = [];
   zoom: number = 1;
 
   constructor(
     private videosService: VideosService,
-    private route: ActivatedRoute // Inyecta ActivatedRoute
+    private route: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
-    const id = this.route.snapshot.paramMap.get('id'); // Obtiene el ID de la URL
+    const id = this.route.snapshot.paramMap.get('id')
     if (id) {
       this.videosService.getVideo(id).subscribe(data => {
         this.video = data;

@@ -15,6 +15,7 @@ import { TodosComponent } from './components/todos/todos.component';
 import { PendientesComponent } from './components/pendientes/pendientes.component';
 import { UploadComponent } from './components/upload/upload.component';
 import { PdfsComponent } from './components/pdfs/pdfs.component';
+import { OtrosVideosComponent } from './components/otros-videos/otros-videos.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { PdfsComponent } from './components/pdfs/pdfs.component';
     TodosComponent,
     PendientesComponent,
     UploadComponent,
-    PdfsComponent
+    PdfsComponent,
+    OtrosVideosComponent
   ],
   imports: [
     BrowserModule,

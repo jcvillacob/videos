@@ -3,19 +3,18 @@ import { Router } from '@angular/router';
 import { VideosService } from 'src/app/services/videos.service';
 
 @Component({
-  selector: 'app-todos',
-  templateUrl: './todos.component.html',
-  styleUrls: ['./todos.component.css']
+  selector: 'app-otros-videos',
+  templateUrl: './otros-videos.component.html',
+  styleUrls: ['./otros-videos.component.css']
 })
-export class TodosComponent implements OnInit{
+export class OtrosVideosComponent implements OnInit {
   videos: any[] = [];
 
-  constructor(private videosService: VideosService, private router: Router ) {}
+  constructor (private videosService: VideosService, private router: Router) {}
 
   ngOnInit(): void {
       this.videosService.getVideos().subscribe(data => {
         this.videos = data;
-        console.log(data);
       })
   }
 
@@ -23,10 +22,9 @@ export class TodosComponent implements OnInit{
     const type = video.type;
     const id = video._id;
     if(type === 'PDF') {
-      this.router.navigate(['pdf', id]);
+      this.router.navigate(['/pdf', id]);
     } else {
-      this.router.navigate(['video', id]);
+      this.router.navigate(['/video', id]);
     }
   }
-
 }

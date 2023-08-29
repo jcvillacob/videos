@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from '../../environments/environment.development';
+import { Video, VideoDTO} from '../models/video'
 
 @Injectable({
   providedIn: 'root',
 })
 export class VideosService {
-  private readonly baseUrl = 'http://localhost:4000/videos';
+  private readonly baseUrl = environment.URL;
 
   constructor(private http: HttpClient) {}
 
@@ -18,14 +20,14 @@ export class VideosService {
     formData.append('videoFile', videoFile, videoFile.name);
     formData.append('imgFile', imgFile, imgFile.name);
 
-    return this.http.post(this.baseUrl, formData);
+    return this.http.post<Video>(this.baseUrl, formData);
   }
 
-  getVideos(): Observable<any> {
-    return this.http.get(this.baseUrl);
+  getVideos(): Observable<Video[]> {
+    return this.http.get<Video[]>(this.baseUrl);
   }
 
-  getVideo(id: string): Observable<any> {
-    return this.http.get(this.baseUrl+ '/' + id);
+  getVideo(id: string): Observable<Video> {
+    return this.http.get<Video>(this.baseUrl+ '/' + id);
   }
 }

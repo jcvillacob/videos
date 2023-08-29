@@ -1,6 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { ActivatedRoute } from '@angular/router'; // Importa ActivatedRoute
+import { ActivatedRoute } from '@angular/router';
 import { VideosService } from 'src/app/services/videos.service';
+import { Video } from '../../models/video'
 
 @Component({
   selector: 'app-reproductor',
@@ -9,23 +10,26 @@ import { VideosService } from 'src/app/services/videos.service';
 })
 export class ReproductorComponent implements OnInit {  
   leyendo: boolean = false;
-  video: any = {};
-  descriptions: [] = [];
+  video!: Video;
+  descriptions: string[] = [];
 
-  constructor(
-    private videosService: VideosService,
-    private route: ActivatedRoute // Inyecta ActivatedRoute
-  ) { }
+  constructor(private videosService: VideosService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    const id = this.route.snapshot.paramMap.get('id'); // Obtiene el ID de la URL
-    if (id) {
-      this.videosService.getVideo(id).subscribe(data => {
-        this.video = data;
-        this.descriptions = data.description.split('\r\n\r\n');
-        console.log(this.descriptions);
-      })
-    }
+    this.route.paramMap.subscribe(params => {
+      const id = params.get('id');
+      if (id) {
+        this.loadVideo(id);
+      }
+    });
+  }
+
+  private loadVideo(id: string): void {
+    this.videosService.getVideo(id).subscribe(data => {
+      this.video = data;
+      this.descriptions = data.description.split('\r\n\r\n');
+      console.log(this.descriptions);
+    });
   }
 
   changeLeyendo() {

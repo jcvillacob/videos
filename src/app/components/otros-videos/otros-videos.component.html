@@ -1,0 +1,11 @@
+<div class="side__title">
+    Todos los Videos
+</div>
+<div class="side__container">
+    <div class="container__element" *ngFor="let video of videos; index as i" (click)= verDocument(video)>
+        <div class="element__image">
+            <img src="{{video.imgUrl}}" alt="" class="element__img">
+        </div>
+        <div class="element__name">{{ video.title }}</div>
+    </div>
+</div>

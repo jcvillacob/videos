@@ -156,11 +156,4 @@ pdf-viewer {
         height: fit-content;
         overflow-y: visible;
     }
-
-    /* SIDE */
-    .container__side {
-        position: inherit;
-        min-height: 200px;
-        margin-top: 20px;
-    }
 }

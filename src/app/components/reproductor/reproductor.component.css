@@ -80,16 +80,8 @@
 /* =========== CONTAINER PARA SIDE =========== */
 .container__side {
     width: 30%;
-    height: calc(100vh);
     border: 1px solid var(--primary-color);
 }
-
-.side__title {
-    color: #FFF;
-    background-color: var(--primary-color);
-    padding: 5px 0 5px 5px;
-}
-
 
 
 /* ====================== RESPONSIVE ====================== */
@@ -148,12 +140,5 @@
     .info__resto.-leyendo {
         height: fit-content;
         overflow-y: visible;
-    }
-
-    /* SIDE */
-    .container__side {
-        position: inherit;
-        min-height: 200px;
-        margin-top: 20px;
     }
 }
